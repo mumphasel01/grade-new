@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade And Data Collection</title>
+</head>
+<body>
+    <p> Name: <b id="student-name"></b></p>
+    <p> Level: <b id="student-level"></b></p>
+    <p> Score: <b id="grade"></b></p>
+    <input type="text" oninput="getinputValue()" placeholder="input your Name" id="name">
+   <input type="text" oninput="studentlevel()" placeholder="Input your Level" id="level">
+   <input type="number" oninput="gradeScore()" placeholder="Input your " id="score">
+
+
+
+
+
+    <script>
+
+function studentlevel(){
+            // let inputValue = document.getElementById('name').value;
+            // document.getElementById('student-name').innerHTML = inputValue;
+
+            let levelValue = document.getElementById('level').value;
+            document.getElementById('student-level').innerHTML = levelValue;
+        }
+
+
+
+
+
+
+        function getinputValue(){
+            let inputValue = document.getElementById('name').value;
+            document.getElementById('student-name').innerHTML = inputValue;
+
+            // let levelValue = document.getElementById('level').value;
+            // document.getElementById('student-level').innerHTML = levelValue;
+        }
+
+
+        function gradeScore(){
+        let score = document.getElementById('score').value;
+
+    //     let studentName = document.getElementById('name').value;
+    //     document.getElementById('student-name').innerHTML = studentName;
+
+    //    let studentLevel = document.getElementById('level').value;
+    //     document.getElementById('student-level').innerHTMl = studentLevel;
+
+        if(score >= 70 && score <= 100){
+            document.getElementById('grade').innerHTML = 'A';
+
+        }else if(score >= 60 && score <= 69){
+            document.getElementById('grade').innerHTML = 'B';
+
+        }else if(score >= 50 && score <= 59){
+            document.getElementById('grade').innerHTML = 'C';
+
+        }else if(score >= 45 && score <= 49){
+            document.getElementById('grade').innerHTML = 'D';
+
+        }else if(score >= 40 && score <= 44){
+            document.getElementById('grade').innerHTML = 'E';
+
+        }else if(score >=30 && score <= 39){
+            document.getElementById('grade').innerHTML = 'Fail'
+        }else if(score >100 || score < 0){
+            document.getElementById('grade').innerHTML = 'Invalid Score'
+        }else{
+            document.getElementById('grade').innerHTML = 'You Fail'
+        }
+
+
+    
+}
+
+
+    </script>
+
+
+
+</body>
+</html>
